@@ -95,6 +95,57 @@ label:hover{
   left: 0;
 }
 
+
+
+
+/* adding like button style here */
+.like-btn{
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* background-color: white; */
+  color: white;
+  /* font-size: 20px; */
+  /* padding: 12px 24px; */
+  /* border: none; */
+  cursor: pointer;
+  font-size: large;
+  /* border-radius: 5px; */
+}
+
+
+.like-count{
+  position: absolute;
+  top: 83%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* background-color: white; */
+  color: white;
+  /* font-size: 20px; */
+  padding: 12px 24px;
+  margin-bottom: 145px;
+  /* border: none; */
+  cursor: pointer;
+  font-size: large;
+  /* border-radius: 5px; */
+}
+ 
+
+.like-btn:hover {
+   color: red;
+}
+.keep-red{
+  color: red;
+}
+/* adding like button style here */
+
+
+
+
+
 /* modal styles */
 .backdrop{
   position: fixed;
@@ -111,4 +162,15 @@ label:hover{
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

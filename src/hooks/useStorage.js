@@ -6,6 +6,11 @@ const useStorage = (file) => {
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
+  // adding extra functionalities.
+  let [likes, setLikes] = useState(0);
+  const [comments, setComments] = useState(['nsnfns']);
+  // const collectionRef = null;
+
   useEffect(() => {
     // references
     const storageRef = projectStorage.ref(file.name);
@@ -19,12 +24,12 @@ const useStorage = (file) => {
     }, async () => {
       const url = await storageRef.getDownloadURL();
       const createdAt = timestamp();
-      await collectionRef.add({ url, createdAt });
+      await collectionRef.add({ url, createdAt, likes, comments });
       setUrl(url);
     });
   }, [file]);
 
-  return { progress, url, error };
+  return { progress, url, error, likes, comments, setLikes, setComments};
 }
 
 export default useStorage;

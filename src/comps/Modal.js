@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import LikeComment from './LikeComment';
 
-const Modal = ({ setSelectedImg, selectedImg }) => {
+const Modal = ({ setSelectedImg, selectedImg, id }) => {
 
   const handleClick = (e) => {
     if (e.target.classList.contains('backdrop')) {
       setSelectedImg(null);
     }
   }
+  // console.log(selectedImg.id)
 
   return (
     <motion.div className="backdrop" onClick={handleClick}
@@ -18,6 +20,7 @@ const Modal = ({ setSelectedImg, selectedImg }) => {
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
       />
+      {/* <LikeComment uid={id} /> */}
     </motion.div>
   )
 }
